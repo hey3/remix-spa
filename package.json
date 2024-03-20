@@ -21,7 +21,7 @@
   "engines": {
     "node": "20.x"
   },
-  "packageManager": "pnpm@8.15.4",
+  "packageManager": "pnpm@9.1.2",
   "type": "module",
   "scripts": {
     "dev": "remix vite:dev",
@@ -29,6 +29,10 @@
     "preview": "vite preview",
     "format": "prettier . --check --ignore-unknown",
     "format:fix": "prettier . --write --ignore-unknown",
+    "lint": "pnpm lint:eslint",
+    "lint:fix": "pnpm lint:eslint-fix",
+    "lint:eslint": "eslint ./**/*.{js,ts,tsx}",
+    "lint:eslint-fix": "eslint --fix ./**/*.{js,cjs,ts,tsx}",
     "typecheck": "tsc --project tsconfig.json --pretty --noEmit --incremental false"
   },
   "dependencies": {
@@ -37,11 +41,21 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@eslint/js": "8.57.0",
     "@remix-run/dev": "2.8.1",
     "@types/react": "18.2.67",
     "@types/react-dom": "18.2.22",
+    "eslint": "8.57.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-jsx-a11y": "6.8.0",
+    "eslint-plugin-react": "7.34.2",
+    "eslint-plugin-react-hooks": "4.6.2",
+    "eslint-plugin-unused-imports": "4.0.0",
+    "globals": "14.0.0",
     "prettier": "3.2.5",
     "typescript": "5.4.2",
+    "typescript-eslint": "7.3.1",
     "vite": "5.1.6"
   }
 }
