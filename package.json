@@ -1,0 +1,44 @@
+{
+  "name": "remix-spa",
+  "version": "1.0.0",
+  "description": "Remix SPA Sample",
+  "keywords": [
+    "react",
+    "typescript",
+    "remix"
+  ],
+  "homepage": "https://github.com/hey3/remix-spa#readme",
+  "bugs": {
+    "url": "https://github.com/hey3/remix-spa/issues"
+  },
+  "license": "MIT",
+  "author": "hey3",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hey3/remix-spa.git"
+  },
+  "engines": {
+    "node": "20.x"
+  },
+  "packageManager": "pnpm@8.15.4",
+  "type": "module",
+  "scripts": {
+    "dev": "remix vite:dev",
+    "build": "remix vite:build",
+    "preview": "vite preview",
+    "typecheck": "tsc --project tsconfig.json --pretty --noEmit --incremental false"
+  },
+  "dependencies": {
+    "@remix-run/react": "2.8.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "2.8.1",
+    "@types/react": "18.2.67",
+    "@types/react-dom": "18.2.22",
+    "typescript": "5.4.2",
+    "vite": "5.1.6"
+  }
+}
