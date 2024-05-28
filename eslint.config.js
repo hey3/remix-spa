@@ -42,6 +42,7 @@ const configBase = typescriptEslint.config(js.configs.recommended, {
         },
       },
     ],
+    'import/no-unresolved': 'off',
     'unused-imports/no-unused-imports': 'error',
   },
 })

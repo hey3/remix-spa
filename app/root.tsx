@@ -1,3 +1,4 @@
+import { type LinksFunction } from '@remix-run/node'
 import {
   Links,
   Meta,
@@ -7,6 +8,15 @@ import {
   ScrollRestoration,
 } from '@remix-run/react'
 import { type ReactNode } from 'react'
+import globalStyle from '../styles/global.css?url'
+import resetStyle from '../styles/reset.css?url'
+
+export const links: LinksFunction = () => {
+  return [
+    { rel: 'stylesheet', href: globalStyle },
+    { rel: 'stylesheet', href: resetStyle },
+  ]
+}
 
 export const meta: MetaFunction = () => {
   return [{ title: 'Remix SPA' }]

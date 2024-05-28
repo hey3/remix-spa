@@ -29,22 +29,25 @@
     "preview": "vite preview",
     "format": "prettier . --check --ignore-unknown",
     "format:fix": "prettier . --write --ignore-unknown",
-    "lint": "pnpm lint:eslint",
-    "lint:fix": "pnpm lint:eslint-fix",
+    "lint": "pnpm lint:eslint && pnpm lint:style",
+    "lint:fix": "pnpm lint:eslint-fix && pnpm lint:style-fix",
     "lint:eslint": "eslint ./**/*.{js,ts,tsx}",
-    "lint:eslint-fix": "eslint --fix ./**/*.{js,cjs,ts,tsx}",
+    "lint:eslint-fix": "eslint --fix ./**/*.{js,ts,tsx}",
+    "lint:style": "stylelint './**/*.css'",
+    "lint:style-fix": "stylelint --fix './**/*.css'",
     "typecheck": "tsc --project tsconfig.json --pretty --noEmit --incremental false"
   },
   "dependencies": {
-    "@remix-run/react": "2.8.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "@remix-run/node": "2.9.2",
+    "@remix-run/react": "2.9.2",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
     "@eslint/js": "8.57.0",
-    "@remix-run/dev": "2.8.1",
-    "@types/react": "18.2.67",
-    "@types/react-dom": "18.2.22",
+    "@remix-run/dev": "2.9.2",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
     "eslint": "8.57.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-import": "2.29.1",
@@ -52,10 +55,13 @@
     "eslint-plugin-react": "7.34.2",
     "eslint-plugin-react-hooks": "4.6.2",
     "eslint-plugin-unused-imports": "4.0.0",
-    "globals": "14.0.0",
+    "globals": "15.3.0",
     "prettier": "3.2.5",
-    "typescript": "5.4.2",
-    "typescript-eslint": "7.3.1",
-    "vite": "5.1.6"
+    "stylelint": "16.5.0",
+    "stylelint-config-recess-order": "5.0.1",
+    "stylelint-config-standard": "36.0.0",
+    "typescript": "5.4.5",
+    "typescript-eslint": "7.11.0",
+    "vite": "5.2.12"
   }
 }

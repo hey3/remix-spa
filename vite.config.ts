@@ -5,6 +5,7 @@ export default defineConfig({
   plugins: [
     remix({
       ssr: false,
+      ignoredRouteFiles: ['**/*.css'],
     }),
   ],
 })
